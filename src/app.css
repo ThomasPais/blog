@@ -1,0 +1,21 @@
+@import "$lib/styles/themes.css";
+@import "$lib/styles/fonts.css";
+
+body {
+    font-family: var(--body-font);
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+.container {
+    margin-inline: 1.5rem;
+}
+
+.grid {
+    display: grid;
+    gap: 1.5rem;
+}
