@@ -5,27 +5,29 @@
 	import Download from '~icons/lucide/download';
 </script>
 
-<section class="container grid">
-	<h1 class="title">Thomas Païs</h1>
+<section class="container">
+	<div class="grid">
+		<h1 class="title">Thomas Païs</h1>
 
-	<div class="perfil">
-		<img src="perfil.jpg" alt="Thomas Païs" class="image" />
+		<div class="perfil">
+			<img src="perfil.png" alt="Thomas Païs" class="image" />
 
-		<div class="socials">
-			<a href="/" target="_blank" class="social"><Mail /></a>
-			<a href="/" target="_blank" class="social"><Linkedin /></a>
-			<a href="/" target="_blank" class="social"><Github /></a>
+			<div class="socials">
+				<a href="/" target="_blank" class="social"><Mail /></a>
+				<a href="/" target="_blank" class="social"><Linkedin /></a>
+				<a href="/" target="_blank" class="social"><Github /></a>
+			</div>
 		</div>
-	</div>
 
-	<div class="info">
-		<p class="description">
-			<b>Étudiant en école d'ingénieur</b> Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-			Impedit temporibus perferendis libero totam, rerum voluptas tenetur debitis enim quo doloremque
-			repudiandae distinctio vel ea reprehenderit cupiditate laboriosam iusto optio obcaecati.
-		</p>
+		<div class="info">
+			<p class="description">
+				<b>Étudiant en école d'ingénieur</b> Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+				Impedit temporibus perferendis libero totam, rerum voluptas tenetur debitis enim quo doloremque
+				repudiandae distinctio vel ea reprehenderit cupiditate laboriosam iusto optio obcaecati.
+			</p>
+		</div>
+		<a href="/" class="resume">Download CV <Download /></a>
 	</div>
-	<a href="/" class="resume">Download CV <Download /></a>
 </section>
 
 <style>
