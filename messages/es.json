@@ -1,5 +1,7 @@
 {
 	"$schema": "https://inlang.com/schema/inlang-message-format",
+	"construction": "En construcción:",
+	"construction_text": "Este sitio web se encuentra en sus primeras etapas. ¡Espere cambios importantes hasta que la versión 1.0 esté lista! ¡Y muchas cosas nuevas!",
 	"hello": "Hola de España",
 	"change_language_to": "Cambia lengua a {languageTag}"
 }

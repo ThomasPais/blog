@@ -6,7 +6,8 @@
 <div>
 	<p>
 		<Construction color="#e47312" width="1.5rem" height="1.5rem" style="vertical-align: middle;" />
-		<b>{m.construction()}</b> m.construction-text() 🚀
+		<b>{m.construction()}</b>
+		{m.construction_text()} 🚀
 	</p>
 </div>
 
