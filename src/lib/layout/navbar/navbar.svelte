@@ -1,11 +1,12 @@
 <script lang="ts">
 	import { Hamburger } from '$lib/components/hamburger';
+	import { LanguageButton } from '$lib/components/language-button';
+	import { Tooltip } from '$lib/components/tooltip';
 
 	import { createSeparator, melt, type CreateSeparatorProps } from '@melt-ui/svelte';
 
 	import Search from '~icons/lucide/search';
 	import Moon from '~icons/lucide/moon';
-	import Languages from '~icons/lucide/languages';
 
 	import { page } from '$app/stores';
 	$: pathname = $page.url.pathname;
@@ -49,9 +50,11 @@
 		<div use:melt={$vertical} class="separator-vertical" />
 
 		<div class="settings">
-			<Search width="24px" height="24px" stroke="currentColor" />
-			<Moon width="24px" height="24px" stroke="currentColor" />
-			<Languages width="24px" height="24px" stroke="currentColor" />
+			<LanguageButton />
+			<Tooltip text="Search"><Search width="24px" height="24px" stroke="currentColor" /></Tooltip>
+			<Tooltip text="Switch theme"
+				><Moon width="24px" height="24px" stroke="currentColor" /></Tooltip
+			>
 		</div>
 
 		<div use:melt={$vertical} class="separator-vertical" />

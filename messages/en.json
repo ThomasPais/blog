@@ -1,0 +1,5 @@
+{
+	"$schema": "https://inlang.com/schema/inlang-message-format",
+	"hello": "Hi from Ingland",
+	"change_language_to": "Change language to {languageTag}"
+}
