@@ -1,8 +1,8 @@
 +++
 title = "Build a static blog website with Zola from scratch"
 description = "Learn how to build a static blog website with Zola like this one from scratch."
-date = 2025-11-01
-updated = 2026-12-01
+date = 2026-01-21
+updated = 2026-01-21
 [taxonomies]
 tags = ["web"]
 +++
