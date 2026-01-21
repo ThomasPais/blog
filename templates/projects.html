@@ -1,0 +1,34 @@
+{% extends "base.html" %} {% block content %}
+<h1 class="title">{{ section.title }}</h1>
+<p>{{ section.description }}</p>
+{% for project in section.pages -%}
+<article class="project">
+  <header>
+    <h2>
+      <a href="{{ project.permalink }}">{{ project.title }}</a>
+    </h2>
+  </header>
+  {% if project.image -%}
+  <img
+    src="{{ get_url(path=section.path ~ project.image) }}"
+    alt="{{ project.title }}"
+    class="project-image"
+  />
+  {% endif -%} {% if project.date or project.extra.status -%}
+  <p class="project-info">
+    {{ project.date | date(format="%Y") }} · {{ project.extra.status }}
+  </p>
+  {% endif -%} {% if project.description -%}
+  <p>{{ project.description }}</p>
+  {% endif -%} {% if project.taxonomies.tags -%}
+  <div class="tags__container">
+    <a href="/tags">Tags:</a>
+    <ul class="tags">
+      {% for tag in project.taxonomies.tags -%}
+      <li><a href="{{ get_url(path='tags/' ~ tag) }}">{{ tag }}</a></li>
+      {% endfor -%}
+    </ul>
+  </div>
+  {% endif -%}
+</article>
+{% endfor -%} {% endblock content %}

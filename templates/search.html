@@ -1,0 +1,9 @@
+{% extends "base.html" %} {% block content %}
+<h1 class="title">{{ page.title }}</h1>
+
+<input type="text" id="search-input" placeholder="Search..." />
+<div class="search-results">
+  <ul class="search-results__items"></ul>
+</div>
+
+{% endblock content %}

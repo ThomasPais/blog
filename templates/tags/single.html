@@ -1,0 +1,23 @@
+{% extends "base.html" %} {% block content %}
+<h1>#{{ term.name }}</h1>
+{% set posts = term.pages | filter(attribute='components.0', value='posts') %}
+{% set projects = term.pages | filter(attribute='components.0',
+value='projects') %} {% if posts %}
+<h2>Posts</h2>
+<ul>
+  {% for page in posts %}
+  <li>
+    <a href="{{ page.permalink }}">{{ page.title }}</a>
+  </li>
+  {% endfor %}
+</ul>
+{% endif %} {% if projects %}
+<h2>Projects</h2>
+<ul>
+  {% for page in projects %}
+  <li>
+    <a href="{{ page.permalink }}">{{ page.title }}</a>
+  </li>
+  {% endfor %}
+</ul>
+{% endif %} {% endblock content %}

@@ -1,0 +1,20 @@
+<script>
+  const themeBtn = document.querySelector("#theme-toggle");
+
+  if (themeBtn) {
+    themeBtn.addEventListener("click", () => {
+      const current = document.documentElement.getAttribute("data-theme");
+      const next = current === "dark" ? "light" : "dark";
+
+      document.documentElement.setAttribute("data-theme", next);
+      localStorage.setItem("theme", next);
+    });
+  }
+</script>
+{% if page.extra.load_search or section.extra.load_search %}
+<script type="text/javascript" src="{{ get_url(path="elasticlunr.min.js") }}">
+</script>
+<script type="text/javascript" src="{{ get_url(path="search.js") }}"></script>
+{% endif %}
+
+

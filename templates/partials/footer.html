@@ -1,0 +1,24 @@
+<footer class="site-footer">
+        <p class="footer-copy">
+          <a
+            href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
+            class="footer-copy-link"
+          >
+            CC BY-NC 4.0
+          </a>
+          &COPY;
+          <time datetime="{{ now() | date(format="%Y") }}">
+            {{ now() | date(format="%Y") }}
+          </time>
+          {{ config.extra.author }}
+        </p>
+        <div class="footer-links">
+          <button id="theme-toggle" aria-label="Toggle color theme">
+            <svg xmlns="http://www.w3.org/2000/svg" class="sun-icon" width="1rem" height="1rem" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12a4 4 0 1 0 8 0a4 4 0 1 0-8 0m-5 0h1m8-9v1m8 8h1m-9 8v1M5.6 5.6l.7.7m12.1-.7l-.7.7m0 11.4l.7.7m-12.1-.7l-.7.7"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" class="moon-icon" width="1rem" height="1rem" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3h.393a7.5 7.5 0 0 0 7.92 12.446A9 9 0 1 1 12 2.992z"/></svg>
+          </button>
+          <a href="/rss.xml" class="footer-rss">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1rem" height="1rem" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 19a1 1 0 1 0 2 0a1 1 0 1 0-2 0M4 4a16 16 0 0 1 16 16M4 11a9 9 0 0 1 9 9"/></svg>
+          </a>
+        </div>
+      </footer>

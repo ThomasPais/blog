@@ -1,0 +1,316 @@
+@use "variables" as *;
+
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
+
+:root {
+    .sun-icon {
+        display: none;
+    }
+    .moon-icon {
+        display: block;
+    }
+
+    --background: #faf7f2;
+    --foreground: #141413;
+    --border: #ccc;
+    --accent: #9e4440;
+    --accent-hover: #7a3533;
+}
+
+[data-theme="dark"] {
+    .sun-icon {
+        display: block;
+    }
+    .moon-icon {
+        display: none;
+    }
+
+    --background: #141413;
+    --foreground: #f3eee4;
+    --border: #4a4a4a;
+    --accent: #e07a5f;
+    --accent-hover: #f4a594;
+}
+
+:not(pre) > code {
+    font-family: monospace;
+    padding: 0.125rem 0.25rem;
+    background: var(--accent);
+    border-radius: 0.125rem;
+    color: var(--background);
+}
+
+.giallo {
+    padding-block: 0.75rem;
+    font-size: 0.875rem;
+    overflow-x: auto;
+    border: 1px solid var(--border);
+    box-shadow: var(--accent) 4px 4px 0px 0px;
+    scrollbar-color: var(--foreground) var(--background);
+}
+
+.giallo-l {
+    display: inline-block;
+    min-height: 1lh;
+    width: 100%;
+    padding: 0.125rem 1rem;
+}
+.giallo-ln {
+    display: inline-block;
+    user-select: none;
+    margin-right: 0.75rem;
+    min-width: 3ch;
+    text-align: right;
+}
+
+body {
+    font-family: system-ui;
+    background-color: var(--background);
+    color: var(--foreground);
+}
+
+a {
+    color: var(--accent);
+    text-underline-offset: 2px;
+}
+
+a:hover {
+    color: var(--accent-hover);
+}
+
+.site-container {
+    max-width: $site-max-width + ($site-padding * 2);
+    min-height: 100vh;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem $site-padding;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Lora";
+}
+
+h1 {
+    font-size: 1.75rem;
+    margin-top: 0;
+}
+
+h2 {
+    font-size: 1.375rem;
+}
+
+h3 {
+    font-size: 1.125rem;
+}
+
+p {
+    line-height: 1.5rem;
+}
+
+li {
+    line-height: 2rem;
+}
+
+/* --- Header --------------------------------------------------------------- */
+
+.site-header {
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding-left: 0;
+    margin-block: 0;
+    gap: 1.5rem;
+    font-size: 0.875rem;
+}
+
+.nav-links li a {
+    font-size: 0.875rem;
+    text-decoration: none;
+}
+
+.nav-links li:first-child {
+    margin-right: auto;
+}
+
+.nav-links li:first-child a {
+    font-size: 1.125rem;
+    font-weight: 500;
+}
+
+/* --- Main ----------------------------------------------------------------- */
+
+.site-content {
+    flex-grow: 1;
+}
+
+/* --- Footer --------------------------------------------------------------- */
+
+.site-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1.5rem;
+    margin-top: 1.5rem;
+    border-top: 1px solid var(--border);
+}
+
+.footer-copy {
+    font-size: 0.875rem;
+    margin-block: 0;
+}
+
+.footer-copy-link {
+    text-decoration: none;
+}
+
+.footer-links {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+#theme-toggle {
+    display: flex;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    background: none;
+    color: inherit;
+}
+
+.footer-rss {
+    display: flex;
+    color: inherit;
+}
+
+/* --- 404 ------------------------------------------------------------------ */
+
+.not-found-container {
+    border: 1px solid black;
+    text-align: center;
+    padding-inline: 1.5rem;
+}
+
+input[type="text"] {
+    width: 100%;
+    border: 1px solid var(--border);
+    padding: 0.75rem 1rem;
+    background: none;
+    color: inherit;
+}
+
+.post-list {
+    ul {
+        list-style: none;
+        padding-left: 0;
+    }
+}
+
+.post-title {
+    margin-bottom: 0.5rem;
+}
+
+.post-info {
+    margin-top: 0.5rem;
+}
+
+.markdown-alert-note::before {
+    content: "Note:";
+}
+
+.markdown-alert-note {
+    border: 1px solid var(--border);
+    margin-inline: 0;
+    padding: 1rem 1.5rem;
+    box-shadow: var(--accent) 4px 4px 0px 0px;
+
+    p {
+        margin-block: 0;
+    }
+}
+
+.tags__container {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    font-size: 0.875rem;
+
+    .tags {
+        margin-block: 0;
+        display: flex;
+        gap: 0.5rem;
+        padding-left: 0;
+        list-style: none;
+
+        a {
+            color: var(--background);
+            text-decoration: none;
+            background-color: var(--accent);
+            padding: 0.125rem 0.25rem;
+            border-radius: 0.125rem;
+        }
+
+        a:hover {
+            background-color: var(--accent-hover);
+        }
+    }
+}
+
+.project {
+    margin-block: 3rem;
+    h2 {
+        margin-bottom: 0;
+    }
+    p {
+        margin-bottom: 0.25rem;
+    }
+}
+
+.project-info {
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+}
+
+table {
+    overflow-x: auto;
+    width: 100%;
+    border-collapse: collapse;
+    font-variant-numeric: tabular-nums;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+/* Header styling */
+th {
+    text-align: left;
+    font-weight: 600;
+    padding: 12px 16px;
+    border-bottom: 2px solid var(--border);
+    /* background-color: var(--bg-secondary); */
+    /* color: var(--hl-keyword); /* Using your Giallo accent */
+}
+
+/* Cell styling */
+td {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border);
+}
+
+/* Zebra Striping */
+tbody tr:nth-child(even) {
+    background-color: var(--accent);
+}
+
+/* Hover effect */
+tbody tr:hover {
+    background-color: var(--accent-hover);
+}

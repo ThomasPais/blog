@@ -1,0 +1,40 @@
+title = "Thomas Païs"
+base_url = "https://example.com"
+description = "Thomas Païs blog"
+
+generate_feeds = true
+feed_filenames = ["rss.xml"]
+
+compile_sass = true
+
+build_search_index = true
+
+taxonomies = [
+    { name = "tags", feed = true }
+]
+
+[search]
+index_format = "elasticlunr_json"
+
+[markdown]
+smart_punctuation = true
+bottom_footnotes = true
+github_alerts = true
+
+[markdown.highlighting]
+light_theme = "github-light"
+dark_theme = "github-dark"
+style = "class"
+
+[extra]
+author = "Thomas Païs"
+email = "thomas.pais@outlook.com"
+github = "https://github.com/ThomasPais"
+
+[extra.header]
+links = [
+    { name = "Posts", url = "/posts" },
+    { name = "Projects", url = "/projects" },
+    { name = "Search", url = "/search" },
+    { name = "About", url = "/about" },
+]
