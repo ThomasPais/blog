@@ -1,29 +1,14 @@
 +++
-title = "Personal blog website"
-description = "This is my personal blog website built with Zola. It was designed to be minimalist and fast."
-date = 2025-11-27
-
-[taxonomies]
-tags = ["web"]
-
+title = "Design"
+description = "Overview of the design and the markdown markup"
+template = "empty.html"
+in_search_index = false
+generate_feeds = false
 [extra]
-status = "Active"
 math = true
-
 +++
 
-I was using [Hugo](https://gohugo.io/) before switching to Zola for its simplicity and flexibility.
-
-Here is the source code: [GitHub](https://github.com/yourusername/blog_website).
-
-## Features
-
-- **Search**: A search page is available using `elasticlunr.js` to index and search blog posts.
-- **Responsive Design**: The website is designed to be responsive and works well on all devices.
-
-## Design
-
-### Typography
+## Typography
 
 Text can be **bold**, _italic_, ~~strikethrough~~, and **~~_all at the same time_~~**.
 
@@ -41,7 +26,7 @@ Text can be **bold**, _italic_, ~~strikethrough~~, and **~~_all at the same time
 
 ###### Heading 6
 
-### Lists
+## Lists
 
 - Item 1
 - Item 2
@@ -56,14 +41,14 @@ Text can be **bold**, _italic_, ~~strikethrough~~, and **~~_all at the same time
 - [x] Completed Task
 - [ ] Incomplete Task
 
-### Tables
+## Tables
 
 | Left Column 1 | Right Column 2 | Center Column 3 |
 | :------------ | -------------: | :-------------: |
 | Row 1         |          Row 1 |      Row 1      |
 | Row 2         |          Row 2 |      Row 2      |
 
-### Code Blocks
+## Code Blocks
 
 ```vhdl
 library EEE;
@@ -103,17 +88,17 @@ begin
 end architecture RTL;
 ```
 
-### Math
+## Math
 
 $$E=mc^2$$
 
 The energy of a particle is given by the equation $E=mc^2$, where $E$ is the energy, $m$ is the mass, and $c$ is the speed of light.
 
-### Images
+## Images
 
 ![Image Alt Text](/path/to/image.jpg)
 
-### Videos
+## Videos
 
 <!--<video controls>
   <source src="/path/to/video.mp4" type="video/mp4">
@@ -121,11 +106,11 @@ The energy of a particle is given by the equation $E=mc^2$, where $E$ is the ene
 
 <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=elg9RvgVUg2Y1PxS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-### Quotes
+## Quotes
 
 > This is a quote.
 
-### Alerts
+## Alerts
 
 > [!note]
 > This is a note.

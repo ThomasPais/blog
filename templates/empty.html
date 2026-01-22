@@ -1,0 +1,5 @@
+{% extends "base.html" %} {% block content %}
+<h1 class="empty-title">{{ page.title }}</h1>
+{% if page.description %}
+<p class="empty-description">{{ page.description }}</p>
+{% endif %} {{ page.content | safe }} {% endblock content %}

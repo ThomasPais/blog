@@ -40,6 +40,12 @@
     --accent-hover: #f4a594;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.125rem;
+}
+
 :not(pre) > code {
     font-family: monospace;
     padding: 0.125rem 0.25rem;
@@ -95,7 +101,7 @@ a:hover {
     padding: 2rem $site-padding-mobile;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 480px) {
     .site-container {
         padding: 2rem $site-padding;
     }
@@ -103,7 +109,10 @@ a:hover {
 
 h1,
 h2,
-h3 {
+h3,
+h4,
+h5,
+h6 {
     font-family: "Lora";
 }
 
@@ -326,5 +335,51 @@ tbody tr:nth-child(even) {
 
 /* Hover effect */
 tbody tr:hover {
+    background-color: var(--accent-hover);
+}
+
+.empty-title,
+.empty-description {
+    text-align: center;
+}
+
+.empty-title {
+    margin-bottom: 0.5rem;
+}
+
+.empty-description {
+    margin-block: 0.5rem 4rem;
+    font-size: 1.125rem;
+}
+
+.about__info-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.about__profile-image {
+    max-width: 192px;
+    height: auto;
+    border-radius: 0.25rem;
+    object-fit: cover;
+}
+
+.about__resume-container {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.about__resume-link {
+    color: var(--background);
+    text-decoration: none;
+    background-color: var(--accent);
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.125rem;
+}
+
+.about__resume-link:hover {
+    color: var(--background);
     background-color: var(--accent-hover);
 }
