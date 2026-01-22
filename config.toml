@@ -1,5 +1,5 @@
 title = "Thomas Païs"
-base_url = "https://thomaspais.netlify.app"
+base_url = "https://thomaspais.com"
 description = "Thomas Païs blog"
 
 generate_feeds = true
