@@ -1,6 +1,6 @@
 +++
 title = "Personal VHDL library"
-description = "A collection of VHDL components and utilities that can be used in various projects. The library reflects my personal learning journey and is not intended for commercial use."
+description = "A collection of VHDL components and utilities for various FPGA projects."
 date = 2026-01-22
 [taxonomies]
 tags = ["vhdl", "hardware"]
@@ -10,29 +10,38 @@ status = "Active"
 
 ## What is it?
 
-The library is available on [GitHub](https://github.com/ThomasPais/vhdl-library). The documentation is automatically generated from the source code using [TerosHDL](https://terostechnology.github.io/terosHDLdoc/). If you find any issues or have suggestions for improvement, please feel free to open an issue on the Github repository or to contact me.
+This library is a growing collection of hardware modules available on [GitHub](https://github.com/ThomasPais/vhdl-library). 
 
-Each component is documented and verified but **only in simulation for now**. I plan to buy a Xilinx FPGA board to also verify them in hardware. I also plan to add an estimation of the resource usage for each component.
+**Please note that this library reflects my personal learning journey; it is intended for educational purposes and is not designed for commercial use.**
+
+The documentation is automatically generated from the source code using [TerosHDL](https://terostechnology.github.io/terosHDLdoc/), ensuring that the specifications stay in sync with the RTL. If you encounter any issues or have suggestions for improvements, please feel free to open an issue on the GitHub repository or contact me directly.
+
+Every component is fully documented and has been **verified via simulation**. My next milestone is to perform hardware validation on Xilinx FPGA silicon. I also plan to include resource usage estimations (LUTs, FFs, BRAM) for each component to help with design planning.
 
 ## How to use it?
 
-I don't plan to provide a true library file. Instead, you can copy the individual components you need from the repository and integrate them into your project.
+I have chosen not to provide a pre-compiled library file. Instead, you can simply copy the individual source files you need and integrate them directly into your project.
 
-I find this method more flexible because it allows you to customize the library to your specific needs or platform and avoid unnecessary dependencies.
+I find this "modular" approach more flexible for FPGA development. It allows you to:
+* Customize components for your specific platform or constraints.
+* Avoid unnecessary dependencies in your synthesis toolchain.
+* Maintain a "lightweight" project structure by only including what you actually use.
 
-## Components lists
+## Component library
 
-The current version of the library includes the following components:
+The current version of the library includes the following categories and modules:
 
-### Cross domain crossing
+### Clock Domain Crossing (CDC)
 
-- Double flop synchronizer
-- Pulse synchronizer
+* **Double Flop Synchronizer** - A standard two-stage flip-flop chain to mitigate metastability for quasi-static signals.
+* **Pulse Synchronizer** - A toggle-based synchronizer to safely pass single-cycle pulses between asynchronous clock domains.
 
 ### Future plans
 
-- Bus synchronizers
-- FIFOs
-- AXI/AXI-Lite/AXI-Stream bridges
-- DMAs
-- FIR and IIR filters
+I am actively working on expanding the library with the following components:
+
+* **Bus Synchronizers**: For safely transferring multi-bit data between asynchronous clock domains.
+* **FIFOs**: Both synchronous and asynchronous implementations.
+* **AXI Infrastructure**: AXI4-Full, AXI4-Lite and AXI-Stream bridges for system integration.
+* **DSP Modules**: FIR and IIR filters for digital signal processing.
+* **Data Movement**: Basic DMA controllers for memory-to-memory transfers.
