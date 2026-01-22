@@ -22,7 +22,7 @@ If you are interested in building a similar setup, check out my guide: [Build a 
 This website is built using the following technologies:
 
 * **Static Site Generator:** [Zola](https://www.getzola.org/) (Rust-based)
-* **Deployment & CI/CD:** Netlify with custom DNS
+* **Deployment & CI/CD:** [Netlify](https://www.netlify.com/) with custom DNS
 * **Math Rendering:** [KaTeX](https://katex.org/) for high-speed client-side LaTeX processing
 
 ## Core Features
