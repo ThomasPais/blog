@@ -35,7 +35,7 @@ This website is built using the following technologies:
 
 I achieved a perfect score across all [PageSpeed Insights](https://pagespeed.web.dev/analysis/https-thomaspais-com/upcplkwd74?form_factor=mobile) categories. This ensures a seamless experience even for users on low-bandwidth connections.
 
-![Website Performance Metrics](web-results.webp)
+{{ image(src="projects/blog-website/web-results.webp", alt="Website Performance Metrics", caption="Website Performance Metrics") }}
 
 ## Design
 

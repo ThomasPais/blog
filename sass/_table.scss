@@ -1,0 +1,31 @@
+table {
+    overflow-x: auto;
+    width: 100%;
+    border-collapse: collapse;
+    font-variant-numeric: tabular-nums;
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+/* Header styling */
+th {
+    font-weight: 700;
+    padding: 0.75rem 1rem;
+    border-bottom: 2px solid var(--border);
+}
+
+/* Cell styling */
+td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--border);
+}
+
+/* Zebra Striping */
+tbody tr:nth-child(even) {
+    background-color: var(--accent);
+}
+
+/* Hover effect */
+tbody tr:hover {
+    background-color: var(--accent-hover);
+}

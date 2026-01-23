@@ -1,0 +1,17 @@
+{% set resized = resize_image(path=src, width=720, op="fit_width",
+format="webp") %}
+
+<figure class="image-figure">
+  <a href="{{ get_url(path=src) }}" target="_blank">
+    <img
+      src="{{ resized.url }}"
+      width="{{ resized.width }}"
+      height="{{ resized.height }}"
+      alt="{{ alt }}"
+      loading="lazy"
+    />
+  </a>
+  {% if caption %}
+  <figcaption>{{ caption | safe }}</figcaption>
+  {% endif %}
+</figure>

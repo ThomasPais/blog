@@ -94,9 +94,11 @@ $$E=mc^2$$
 
 The energy of a particle is given by the equation $E=mc^2$, where $E$ is the energy, $m$ is the mass, and $c$ is the speed of light.
 
-## Images
+## Figures
 
-![Image Alt Text](/path/to/image.jpg)
+{{ image(src="projects/blog-website/web-results.webp", alt="Website Performance Metrics") }}
+
+{{ image(src="projects/blog-website/web-results.webp", alt="Website Performance Metrics", caption="Exemple figure with caption") }}
 
 ## Videos
 
@@ -115,5 +117,14 @@ The energy of a particle is given by the equation $E=mc^2$, where $E$ is the ene
 > [!note]
 > This is a note.
 
+> [!tip]
+> This is a tip.
+
+> [!important]
+> This is important.
+
 > [!warning]
 > This is a warning.
+
+> [!caution]
+> This is a caution.

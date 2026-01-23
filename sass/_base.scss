@@ -1,56 +1,24 @@
 @use "variables" as *;
 
-@font-face {
-    font-family: "Lora";
-    src:
-        url("/fonts/Lora-Bold.woff2") format("woff2"),
-        url("/fonts/Lora-Bold.ttf") format("truetype");
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "IA Writer Quattro S";
-    src: url("/fonts/iAWriterQuattroS-Regular.woff2") format("woff2");
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-}
-@font-face {
-    font-family: "IA Writer Quattro S";
-    src: url("/fonts/iAWriterQuattroS-Italic.woff2") format("woff2");
-    font-weight: 400;
-    font-style: italic;
-    font-display: swap;
-}
-@font-face {
-    font-family: "IA Writer Quattro S";
-    src: url("/fonts/iAWriterQuattroS-Bold.woff2") format("woff2");
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
-}
-@font-face {
-    font-family: "IA Writer Quattro S";
-    src: url("/fonts/iAWriterQuattroS-BoldItalic.woff2") format("woff2");
-    font-weight: 700;
-    font-style: italic;
-    font-display: swap;
-}
 :root {
-    .sun-icon {
-        display: none;
-    }
-    .moon-icon {
-        display: block;
-    }
-
+    // Theme
     --background: #faf7f2;
     --foreground: #141413;
     --border: #ccc;
     --accent: #9e4440;
     --accent-hover: #7a3533;
+
+    // Fonts
+    --font: "IA Writer Quattro S", system-ui;
+    --title-font: "Lora", serif;
+    --mono-font: monospace;
+}
+
+.sun-icon {
+    display: none;
+}
+.moon-icon {
+    display: block;
 }
 
 [data-theme="dark"] {
@@ -106,7 +74,7 @@ img {
 }
 
 body {
-    font-family: "IA Writer Quattro S", system-ui;
+    font-family: var(--font);
     background-color: var(--background);
     color: var(--foreground);
     overflow-wrap: break-word;
@@ -142,7 +110,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Lora";
+    font-family: var(--title-font);
 }
 
 h1 {
@@ -275,21 +243,6 @@ input[type="text"] {
     margin-top: 0.5rem;
 }
 
-.markdown-alert-note::before {
-    content: "Note:";
-}
-
-.markdown-alert-note {
-    border: 1px solid var(--border);
-    margin-inline: 0;
-    padding: 1rem 1.5rem;
-    box-shadow: var(--accent) 4px 4px 0px 0px;
-
-    p {
-        margin-block: 0;
-    }
-}
-
 .tags__container {
     display: flex;
     gap: 0.5rem;
@@ -330,41 +283,6 @@ input[type="text"] {
 .project-info {
     font-size: 0.875rem;
     margin-top: 0.5rem;
-}
-
-table {
-    overflow-x: auto;
-    width: 100%;
-    border-collapse: collapse;
-    font-variant-numeric: tabular-nums;
-    line-height: 1.5;
-    margin-bottom: 1rem;
-}
-
-/* Header styling */
-th {
-    text-align: left;
-    font-weight: 600;
-    padding: 12px 16px;
-    border-bottom: 2px solid var(--border);
-    /* background-color: var(--bg-secondary); */
-    /* color: var(--hl-keyword); /* Using your Giallo accent */
-}
-
-/* Cell styling */
-td {
-    padding: 12px 16px;
-    border-bottom: 1px solid var(--border);
-}
-
-/* Zebra Striping */
-tbody tr:nth-child(even) {
-    background-color: var(--accent);
-}
-
-/* Hover effect */
-tbody tr:hover {
-    background-color: var(--accent-hover);
 }
 
 .empty-title,
@@ -411,4 +329,14 @@ tbody tr:hover {
 .about__resume-link:hover {
     color: var(--background);
     background-color: var(--accent-hover);
+}
+
+figure {
+    margin-inline: 0;
+}
+
+figcaption {
+    font-size: 0.875rem;
+    text-align: center;
+    font-style: italic;
 }

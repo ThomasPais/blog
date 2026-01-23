@@ -1,0 +1,38 @@
+.markdown-alert-note::before {
+    content: "Note:";
+    color: var(--accent);
+}
+
+.markdown-alert-tip::before {
+    content: "Tip:";
+    color: var(--accent);
+}
+
+.markdown-alert-important::before {
+    content: "Important:";
+    color: var(--accent);
+}
+
+.markdown-alert-warning::before {
+    content: "Warning:";
+    color: var(--accent);
+}
+.markdown-alert-caution::before {
+    content: "Caution:";
+    color: var(--accent);
+}
+
+.markdown-alert-note,
+.markdown-alert-tip,
+.markdown-alert-important,
+.markdown-alert-warning,
+.markdown-alert-caution {
+    border: 1px solid var(--border);
+    margin-inline: 0;
+    padding: 1rem 1.5rem;
+    box-shadow: var(--accent) 4px 4px 0px 0px;
+
+    p {
+        margin-block: 0;
+    }
+}
