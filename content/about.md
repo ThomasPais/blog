@@ -11,11 +11,11 @@ generate_feeds = false
 <div class="about__info-container">
 <div>
 
-I am **Thomas Pais**, a Digital Electronics Engineer based in the "Ville Rose" of **Toulouse, France**.
+I am **Thomas Pais**, an FPGA Engineer based in **Toulouse, France**.
 
 I recently graduated from **ENSEEIHT**, where I specialized in digital electronics, embedded systems and RF design.
 
-Currently, I am an **Application Engineer at Alten**, working on STM32 microcontrollers to detect and analyze anomalies in industrial processes, enabling preventive actions before they become critical issues.
+Currently, I am an **FPGA Engineer at Thales Alenia Space**.
 
 <div class="about__resume-container">
   <a class="about__resume-link" href="/">Resume (EN)</a>
