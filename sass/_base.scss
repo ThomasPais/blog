@@ -3,8 +3,9 @@
 :root {
   // Theme
   --background: #faf7f2;
+  --surface: #ede9e2;
   --foreground: #141413;
-  --border: #ccc;
+  --border: #cccccc;
   --accent: #9e4440;
   --accent-hover: #7a3533;
 
@@ -32,6 +33,7 @@
   }
 
   --background: #141413;
+  --surface: #1e1d1b;
   --foreground: #f3eee4;
   --border: #4a4a4a;
   --accent: #e07a5f;
@@ -235,6 +237,11 @@ input[type="text"] {
   ul {
     list-style: none;
     padding-left: 0;
+  }
+
+  li {
+    display: flex;
+    justify-content: space-between;
   }
 }
 

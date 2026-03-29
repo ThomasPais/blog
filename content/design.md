@@ -56,7 +56,7 @@ use IEEE.std_logic_1164.all;
 
 -- this is the entity
 entity ANDGATE is
-  port ( 
+  port (
     I1 : in std_logic;
     I2 : in std_logic;
     O  : out std_logic);
@@ -75,7 +75,7 @@ use IEEE.std_logic_1164.all;
 
 -- this is the entity
 entity ORGATE is
-  port ( 
+  port (
     I1 : in std_logic;
     I2 : in std_logic;
     O  : out std_logic);

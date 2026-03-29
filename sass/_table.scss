@@ -2,9 +2,11 @@ table {
   overflow-x: auto;
   width: 100%;
   border-collapse: collapse;
+  table-layout: fixed; 
   font-variant-numeric: tabular-nums;
   font-size: 0.875rem;
   line-height: 1.5;
+  margin-block: -1rem 2rem;
 }
 
 /* Header styling */
@@ -22,10 +24,10 @@ td {
 
 /* Zebra Striping */
 tbody tr:nth-child(even) {
-  background-color: var(--accent);
+  background-color: var(--surface);
 }
 
-/* Hover effect */
-tbody tr:hover {
-  background-color: var(--accent-hover);
-}
+// /* Hover effect */
+// tbody tr:hover {
+//   background-color: var(--accent-hover);
+// }
