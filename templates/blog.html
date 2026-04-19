@@ -8,8 +8,17 @@
   <ul>
     {% for post in posts %}
     <li>
-      <a href="{{ post.permalink }}">{{ post.title }}</a>
-      <time datetime="{{ post.date }}">{{ post.date | date(format="%B %e") }}</time>
+      <div class="post-info">
+        <time datetime="{{ post.date }}">{{ post.date | date(format="%b %e") }}</time>
+        {% if post.updated %}
+        <span> - </span>
+        <time class="post-date" datetime="{{ post.updated }}">Updated on {{ post.updated | date(format="%b %e")
+          }}</time>
+        {% endif %}
+      </div>
+      <div>
+        <a href="{{ post.permalink }}">{{ post.title }}</a>
+      </div>
     </li>
     {% endfor %}
   </ul>

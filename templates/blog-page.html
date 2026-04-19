@@ -5,7 +5,7 @@
   Updated: {{ page.updated | date(format="%b %e, %Y") }}{% endif %}
 </p>
 {% if page.description %}
-<p class="post-description">{{ page.description }}</p>
+<p class="post-description"><em>{{ page.description }}</em></p>
 {% endif %}
 <!-- Content --->
 {{ page.content | safe }} {% if page.taxonomies.tags -%}

@@ -1,5 +1,5 @@
 +++
-title = "Build a static blog website with Zola from scratch"
+title = "Build a static blog website with Zola"
 description = "Learn how to build a static blog website with Zola like this one from scratch."
 date = 2026-01-21
 updated = 2026-01-24
