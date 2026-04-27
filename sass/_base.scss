@@ -310,6 +310,7 @@ input[type="text"] {
   display: flex;
   align-items: center;
   gap: 1rem;
+  margin-top: -1rem;
 }
 
 .about__profile-image {
@@ -322,7 +323,7 @@ input[type="text"] {
 .about__resume-container {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
 .about__resume-link {
